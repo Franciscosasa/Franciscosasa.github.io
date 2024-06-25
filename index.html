@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página sobre Calentamiento Global</title>
+    <style>
+        /* Tu CSS existente */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: hsl(0, 0%, 94%); 
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDy2Xv3YWK3pXIQqvOyOWIQs98ffAaZzRdVA&s'); 
+            background-size: cover;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .marquesina {
+            white-space: nowrap;
+            overflow: hidden;
+            animation: marquesina 10s linear infinite;
+        }
+        @keyframes marquesina {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .galeria img {
+            width: 200px;
+            height: 150px;
+            margin: 10px;
+            opacity: 0.8;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .galeria img:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        .section-title {
+            color: #fff; 
+            background-color: rgba(0, 0, 0, 0.5); 
+            padding: 10px;
+            margin-top: 20px;
+        }
+        section {
+            background-color: rgba(255, 255, 255, 0.8); 
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        section p {
+            color: #444; 
+        }
+        nav ul {
+            background-color: rgba(0, 0, 0, 0.5); 
+            padding: 10px;
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav ul li {
+            margin-bottom: 5px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Estilos para dispositivos grandes */
+        @media screen and (min-width: 768px) {
+            header {
+                background-color: #333;
+                color: #fff;
+                padding: 20px;
+                text-align: center;
+            }
+            nav ul {
+                list-style: none;
+                padding: 0;
+                text-align: center;
+            }
+            nav ul li {
+                display: inline;
+                margin-right: 20px;
+            }
+        }
+        /* Estilos para dispositivos pequeños */
+        @media screen and (max-width: 767px) {
+            header {
+                background-color: #333;
+                color: #fff;
+                padding: 10px;
+                text-align: center;
+            }
+            nav ul {
+                list-style: none;
+                padding: 0;
+                text-align: center;
+            }
+            nav ul li {
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 80%;
+            max-width: 600px;
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .form-container form label,
+        .form-container form input,
+        .form-container form textarea,
+        .form-container form select,
+        .form-container form button {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+        function navegarASeccion() {
+            var select = document.getElementById("interes");
+            var seccion = select.value;
+            if (seccion) {
+                window.location.hash = seccion;
+            }
+        }
+    </script>
+</head>
+<body>
+    <img src="https://concepto.de/wp-content/uploads/2018/04/calentamiento-global-min-e1523642673800.jpg" style="width:100%;">
+
+    <nav>
+        <ul>
+            <li><a href="#impacto">Impacto</a></li>
+            <li><a href="#consecuencias">Consecuencias</a></li>
+            <li><a href="#informacion">Información</a></li>
+            <li><a href="#reciclaje">Reciclaje</a></li>
+            <li><a href="#imagenes">Imágenes</a></li>
+            <li><a href="#educacion">Educación</a></li>
+            <li><a href="#participacion">Participación</a></li>
+        </ul>
+    </nav>
+
+    <section id="impacto">
+        <h2 class="section-title">Impacto del Calentamiento Global</h2>
+        <p>El calentamiento global afecta a...</p>
+        <ul>
+            <li>Derretimiento de los glaciares</li>
+            <li>Incremento del nivel del mar</li>
+            <li>Extinción de especies</li>
+            <li>Desastres naturales</li>
+        </ul>
+    </section>
+
+    <section id="consecuencias">
+        <h2 class="section-title">Consecuencias</h2>
+        <div class="marquesina">
+            <p>El aumento de la temperatura global...</p>
+        </div>
+    </section>
+
+    <section id="informacion">
+        <h2 class="section-title">Información adicional</h2>
+        <iframe src="https://www.nationalgeographic.es/medio-ambiente/que-es-el-calentamiento-global" width="800" height="600"></iframe>
+    </section>
+
+    <section id="reciclaje">
+        <h2 class="section-title">Acciones necesarias</h2>
+        <a href="https://es.wikipedia.org/wiki/Reciclaje">Información sobre reciclaje</a><br>
+        <a href="https://www.ecoembes.com/es/reduce-reutiliza-y-recicla/beneficios-de-reciclar"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdS4MyYo7hLgnyl-ayW2j4dFqg-WSl7R8gHA&s" alt="Reciclaje"></a><br>
+        <a href="https://climate.selectra.com/es/que-es/calentamiento-global"><marquee><img src="https://media.tenor.com/nkwB4Zri79cAAAAM/world-on-fire-run.gif" alt="Animación sobre calentamiento global"></marquee></a>
+    </section>
+
+    <section id="imagenes">
+        <h2 class="section-title">Imágenes impactantes</h2>
+        <div class="galeria">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVRTk3dT6xZvEdR7RAngiV802t8munPz2ang&s" alt="Impacto 1">
+            <img src="https://static.nationalgeographic.es/files/styles/image_3200/public/03-polar-bear-hunting-2011080852.jpg?w=1600&h=900" alt="Impacto 2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiCgOyrP69ZO4caoRYiEAcaLnnLVsIwvZVLQ&s" alt="Impacto 3">
+        </div>
+    </section>
+
+    <section id="educacion">
+        <h2 class="section-title">Educación y concienciación</h2>
+        <p>¿QUÉ ES EL CALENTAMIENTO GLOBAL?</p><br>
+        <p>El calentamiento global se refiere al aumento gradual de la temperatura promedio de la superficie terrestre y los océanos. Este fenómeno es principalmente causado por la acumulación de gases de efecto invernadero en la atmósfera, como el dióxido de carbono (CO2), metano (CH4), óxidos de nitrógeno (NOx) y otros. Est
+
+    <section>
+        <h2 class="section-title">Actúa ahora</h2>
+       <a href="https://climateandhealthalliance.org/es/donate-es/"</a>
+        <button>Donar</button>
+       <a href="https://www.manosunidas.org/observatorio/cambio-climatico/campanas-cambio-climatico"</a>
+        <button>Participar en campañas</button>
+    </section>
+   
+
+      <nav>
+        <h2 class="section-title">Navegación</h2>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+          
+        </ul>
+    </nav>
+    <section>
+        <h2 class="section-title">Únete a la causa</h2>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre"><br>
+            <label for="pais de origen">pais de origen:</label>
+            <input type="text" id="pais de origen" name="pais de origen"><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br>
+            <input type="submit" value="Suscribirse">
+        </form>
+    </section>
+   
+    <footer>
+        <p>Este sitio web está alojado en: <a href="#">http://ww25.franciscosasa.ghithub.io/?subid1=20240625-1710-59b4-b69d-af50b70260f3</a></p>
+    </footer>
+
+</body>
+</html>
